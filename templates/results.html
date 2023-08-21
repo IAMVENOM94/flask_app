@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+
+<h2>Calculation Results</h2>
+
+<p><strong>Best Offset:</strong> {{ best_offset }}</p>
+
+<h3>Offset Distances:</h3>
+<ul>
+    {% for distance, offset_distance in combined_data %}
+        <li>Distance = {{ distance }}: Offset Distance ≈ {{ "%.3f"|format(offset_distance) }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/">Go Back</a>
+
+</body>
+</html>
